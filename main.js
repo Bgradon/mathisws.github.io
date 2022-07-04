@@ -25,13 +25,18 @@ $(function() {
 }
 });
 
+var colors = ['#Ec3890', '#730f9e', '#48fdb4'];
+
 $(function() {
   for (let i=11; i<= 15; i++){
+    let color = colors[(Math.random()*colors.length) | 0]
   $('#title'+ i).hover(function() {
-    
+    $('#number'+i).css('color', color);
+    $(this).css('box-shadow', 'inset 0px -40px' + color)
   }, function() {
     // on mouseout, reset the background colour
     $('#number'+i).css('color', 'black');
+    $(this).css("box-shadow", "")
   });
 }
 });
