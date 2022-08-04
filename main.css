@@ -99,14 +99,17 @@ body {
 
 .toggle-menu1.inactive i:nth-child(1) {
   -webkit-animation: uncross1 1000ms forwards;
+  animation: uncross1 1000ms forwards;
 }
 
 .toggle-menu1.inactive i:nth-child(2) {
   -webkit-animation: uncross3 1000ms forwards;
+  animation: uncross3 1000ms forwards;
 }
 
 .toggle-menu1.inactive i:nth-child(3) {
   -webkit-animation: uncross2 1000ms forwards;
+  animation: uncross2 1000ms forwards;
 }
 
 .toggle-menu1 i:nth-child(1) {
@@ -123,17 +126,20 @@ body {
 
 .toggle-menu1.active i:nth-child(1) {
   -webkit-animation: cross1 1000ms forwards;
+  animation: cross1 1000ms forwards;
 }
 
 .toggle-menu1.active i:nth-child(2) {
   -webkit-animation: cross3 1000ms forwards;
+  animation: cross3 1000ms forwards;
 }
 
 .toggle-menu1.active i:nth-child(3) {
   -webkit-animation: cross2 1000ms forwards;
+  animation: cross2 1000ms forwards;
 }
 
-@-webkit-keyframes uncross1 {
+@keyframes uncross1  {
  
   0% {
     background:#21130d;
@@ -164,7 +170,7 @@ body {
   } 
 }
 
-@-webkit-keyframes uncross2 {
+@keyframes uncross2 {
  
   0% {
     background:#21130d;
@@ -195,7 +201,7 @@ body {
   } 
 }
 
-@-webkit-keyframes uncross3 {
+@keyframes uncross3 {
  
 0% {
     background: transparent;
@@ -211,7 +217,7 @@ body {
   } 
 }
 
-@-webkit-keyframes cross1 {
+@keyframes cross1 {
   
   0% {
     top: 16px;
@@ -239,7 +245,7 @@ body {
   }
 }
 
-@-webkit-keyframes cross2  {
+@keyframes cross2  {
 
   0% {
     top: 32px;
@@ -267,7 +273,7 @@ body {
   }
 }
 
-@-webkit-keyframes cross3 {
+@keyframes cross3 {
 
   0% {
     top: 24px;
