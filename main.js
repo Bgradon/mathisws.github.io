@@ -2,18 +2,23 @@ var colors = ['#Ec3890', '#730f9e', '#48fdb4'];
 
 
 $(function() {
-  $(".toggle-menu").click(function() {
+  $(".toggle-menu1").click(function() {
+    if ($(this).hasClass("inactive") === true) {
     $(this).toggleClass("active");
-    $('.menu-drawer').toggleClass("open");
-  });
+    $('.menu-drawer1').toggleClass("open1");
+  } else {
+    $(this).toggleClass("inactive");
+    $('.menu-drawer1').removeClass("open1");
+  };
+});
 });
 
-$(function() {
+/*$(function() {
   $(".toggle-menu1").click(function() {
     $(this).toggleClass("active");
     $('.menu-drawer1').toggleClass("open1");
   });
-});
+});*/
 
 $(function() {
   for (let i=1; i<= 5; i++){
@@ -62,5 +67,23 @@ $(function() {
     $(this).css("box-shadow", ""); 
   });
 }
+});
+
+const btns = document.querySelectorAll(".btn");
+
+btns.forEach((btn) => {
+  btn.addEventListener("mousemove", function(e){
+    const position = btn.getBoundingClientRect();
+    const x = e.pageX - position.left - position.width / 2;
+    const y = e.pageY - position.top - position.height / 2;
+
+    btn.children[0].style.transform = "translate(" + x * 0.6 + "px, " + y * 0.7 + "px)";
+  });
+});
+
+btns.forEach((btn) => {
+  btn.addEventListener("mouseout", function(e){
+    btn.children[0].style.transform = "translate(0px, 0px)";
+  });
 });
 
