@@ -9,16 +9,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<script src="main.js"></script>
+
 <div class="container">
   <div class="grid">
-    <div class="logo1"><img width= "150px" src="logo.png"></div>
-    <div class="toggle-menu1">
-      <a href="#">
-        <i></i>
-        <i></i>
-        <i></i>
-      </a>
+    <div class="header">
+      <div class="logo1">
+        <img src="img/logo.png">
+      </div>
+      <button id="btn-menu" class="toggle-menu1">
+        <a href="#">
+          <i></i>
+          <i></i>
+          <i></i>
+        </a>
+      </button>
     </div>
     <div class="banner"><img src="img/Elsa-marie-petit/1. IMAGE_DEBUT.jpg"></div>
     <div class="label-brief">Brief</div>
@@ -54,7 +58,7 @@
         <div class="mention">© 2022, made with love by thisstudio</div>
     </div>
   </div>
-  <div class="menu-drawer1">
+  <div id="menu" class="menu-drawer1">
     <div class="menu-container">
       <div class="menu-number" id="number11">01</div>
       <div class="menu-title" ><a id="title11" href="index.html">accueil</a></div>
@@ -67,12 +71,13 @@
       <div class="menu-number" id="number15">05</div>
       <div class="menu-title" ><a id="title15" href="contact.html">contact</a></div>
       <div class="menu-soc">
-        <div><a href="#"><i class="fa fa-behance-square fa-2x" aria-hidden="true"></i></a></div>
-        <div><a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></div>
-        <div><a href="#"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></div>
+        <div><a class="btn" href="https://www.behance.net/mathisgrdn" target="_blank"><i class="fa fa-behance-square fa-2x" aria-hidden="true"></i></a></div>
+        <div><a class="btn" href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></div>
+        <div><a class="btn" href="https://www.linkedin.com/in/mathis-gradon-b370b810a/" target="_blank"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a></div>
       </div>
     </div>
   </div>
 </div>
+<script src="main.js"></script>
 </body>
   </html>

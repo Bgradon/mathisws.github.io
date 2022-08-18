@@ -23,8 +23,20 @@
   src: url("fonts/Qanelas-Soft-Medium.otf");
 }
 
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1185px;
+  }
+}
+
+  @media screen and (min-width: 1440px) {
+    .container {
+      max-width: 1536px;
+    }
+  }
+
+
 *{
-  box-sizing: content-box;
   letter-spacing: -0.05em;
 }
 
@@ -34,33 +46,34 @@
 }
 
 body {
-  max-width: 100vw;
-  overflow: auto;
-}
-
-.container {
-  max-width: auto;
-  margin-left: auto;
-  margin-right: auto;
   
 }
 
-.grid {
-  width: 1185px;
-  height: 100%; 
-  position:relative;
-  display: grid;
-  top: 20px;
-  grid-template-columns: 1fr 1fr 1fr 5fr 3fr 5fr;
-  grid-template-rows : auto;
-  height: 100%;
+.container {
+  height : 97vh;
   margin-left: auto;
   margin-right: auto;
-  gap: 20px 0px;
+   
+}
 
+.grid {
+  height: 100%;
+  position:relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 5fr 3fr 5fr;
+  grid-template-rows: auto 1fr auto ;
+  row-gap: 2vh;
 }
 
 .grid div {
+}
+
+.header {
+  grid-column: 1/7;
+  display : flex;
+  justify-content: space-between;
+  
+  align-content: center;
 }
 
 .logo1 {
@@ -79,13 +92,15 @@ body {
   width: auto;
   height: 50px;
   z-index: 20;
+  border: none;
+  background-color: #fff;
 }
 
 .toggle-menu1 a {
-  height: 50px;
+  height: 30px;
   width: 30px;
   float: right;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .toggle-menu1 i {
@@ -294,7 +309,7 @@ body {
   font-family: "qanelas-soft-ExtraBold";
   font-size : 35px;
   text-align: center;
-  padding : 22vh 5vh 28vh;
+  align-self: center;
 }
 
 .bottom {
@@ -302,6 +317,8 @@ body {
   text-align: center;
   font-family: "qanelas-semibold";
   font-size: 40px;
+  border: 2px solid #ccc;
+  padding: 0;
 }
 
 .bottom a {
@@ -660,8 +677,8 @@ text-align: center;
 
 .menu-drawer1 {
   position: absolute;
-  width: 95vw;
-  height:99vh;
+  width: 99vw;
+  height: 99vh;
   background-color: #FFFFFF;
   top: -1100px;
   transition: top linear 0.4s;
@@ -768,13 +785,11 @@ text-align: center;
 }
 
 .animation-container {
-  border: 2px solid #000;
   grid-column: 1/7;
 }
 
 .amimation-container video {
   width: 300px;
-  border: 1px dashed #000;
 }
 
 

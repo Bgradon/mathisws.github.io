@@ -1,17 +1,13 @@
 var colors = ['#Ec3890', '#730f9e', '#48fdb4'];
 
+const btn = document.getElementById('btn-menu')
+const menu = document.getElementById('menu')
 
-$(function() {
-  $(".toggle-menu1").click(function() {
-    if ($(this).hasClass("inactive") === true) {
-    $(this).toggleClass("active");
-    $('.menu-drawer1').toggleClass("open1");
-  } else {
-    $(this).toggleClass("inactive");
-    $('.menu-drawer1').removeClass("open1");
-  };
-});
-});
+btn.addEventListener('click', () => {
+  console.log('click')
+  btn.classList.toggle('active')
+  menu.classList.toggle('open1')
+})
 
 /*$(function() {
   $(".toggle-menu1").click(function() {
